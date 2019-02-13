@@ -1,0 +1,23 @@
+[twitter]
+consumer_key =
+consumer_secret =
+access_token =
+access_toke_secret =
+
+[db]
+maria_user =
+maria_password =
+maria_database =
+maria_host =
+
+[tables]
+table_tweets =
+table_retweets =
+
+[rest]
+user_to_track =
+max_current_tweets =
+dead_time =
+
+[logging]
+file =
