@@ -14,8 +14,10 @@ maria_host =
 table_tweets =
 table_retweets =
 
-[rest]
+[user]
 user_to_track =
+
+[rest]
 max_current_tweets =
 dead_time =
 

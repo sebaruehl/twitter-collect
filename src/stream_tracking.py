@@ -20,6 +20,8 @@ MARIA_HOST = config_parser.get('db', 'maria_host')
 TABLE_TWEETS = config_parser.get('tables', 'table_tweets')
 TABLE_RETWEETS = config_parser.get('tables', 'table_retweets')
 
+USER_TO_TRACK = config_parser.get('user', 'user_to_track')
+
 api = twitter.Api(CONSUMER_KEY,
                   CONSUMER_SECRET,
                   ACCESS_TOKEN,
@@ -30,8 +32,7 @@ db_conn = mariadb.connect(user=MARIA_USER, password=MARIA_PASSWORD, host=MARIA_H
 db_conn.autocommit = False
 db = db_conn.cursor()
 
-with open('../user/top_100_japan.txt') as f:
-    user_ids = [line.split(',')[0] for line in f]
+user_ids = USER_TO_TRACK.split(',')
 
 
 tmp_insert_cnt = 0

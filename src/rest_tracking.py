@@ -26,8 +26,9 @@ TABLE_RETWEETS = config_parser.get('tables', 'table_retweets')
 
 LOG_FILE = config_parser.get('logging', 'file')
 
+USER_TO_TRACK = config_parser.get('user', 'user_to_track')
+
 MAX_CURRENT = config_parser.getint('rest', 'max_current_tweets')
-USER_TO_TRACK = config_parser.get('rest', 'user_to_track')
 DEAD_TIME = config_parser.getint('rest', 'dead_time')
 
 
